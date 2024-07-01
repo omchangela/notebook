@@ -18,7 +18,7 @@ https://notebook-grthjvhgb-om-patels-projects-0f33af2f.vercel.app/
 Clone the project
 
 ```bash
-git clone https://github.com/omchangela/notebook
+git clone https://github.com/omchangela/notebook.git
 ```
 
 Go to the project directory
