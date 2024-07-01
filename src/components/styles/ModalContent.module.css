@@ -45,6 +45,7 @@
 }
 
 /* styles when you submit invalid input */
+
 .inputGroup .errorInput {
   border: 1px solid #ff5151;
   animation: shaking 300ms ease-in-out;
