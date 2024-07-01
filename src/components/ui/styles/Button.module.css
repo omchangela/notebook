@@ -1,0 +1,28 @@
+.button {
+  outline: 0;
+  width: 100%;
+  cursor: pointer;
+  border: 2px solid #000;
+  color: #fff;
+  background: #000;
+  font-size: 20px;
+  letter-spacing: -0.005em;
+  line-height: 28px;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 28px;
+  text-align: center;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover {
+  color: #000;
+  background: var(--accent);
+}
+
+.button:focus {
+  outline: 4px solid var(--accent);
+  outline-offset: 2px;
+}

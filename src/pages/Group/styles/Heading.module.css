@@ -1,0 +1,50 @@
+.heading {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--neutral);
+}
+
+.navigateIcon {
+  display: flex;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--icon);
+}
+
+.navigateIcon:hover {
+  color: var(--info);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title p {
+  max-width: 18ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .navigateIcon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navigateIcon {
+    display: none;
+  }
+
+  .title p {
+    max-width: 45ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

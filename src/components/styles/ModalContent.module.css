@@ -1,0 +1,162 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kbdEsc {
+  font-family: monospace;
+  font-size: 1rem;
+  letter-spacing: 0.1ch;
+  opacity: 0.7;
+  float: right;
+  padding: 0 0.5rem;
+  margin-left: 1rem;
+  border: 2px solid var(--secondary-border);
+  border-radius: 1rem;
+  font-weight: 500;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input {
+  flex: 1;
+}
+
+.inputGroup input {
+  width: 100%;
+  height: 48px;
+  border-radius: 48px;
+  padding-left: 24px;
+  font-size: 1rem;
+  border: 1px solid #89979b;
+  transition: border-color 150ms ease-in-out 0s;
+  outline: none;
+  color: var(--secondary-text);
+  padding-right: 12px;
+}
+
+.inputGroup input:hover {
+  box-shadow: rgb(231 238 236) 0px 0px 0px 3px;
+}
+
+/* styles when you submit invalid input */
+.inputGroup .errorInput {
+  border: 1px solid #ff5151;
+  animation: shaking 300ms ease-in-out;
+}
+
+.inputGroup .errorInput:hover {
+  box-shadow: rgb(255, 216, 216) 0px 0px 0px 3px;
+}
+
+.inputGroup .errorInput:focus {
+  box-shadow: rgb(255, 203, 203) 0px 0px 0px 3px;
+}
+
+@keyframes shaking {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(3px);
+  }
+  40% {
+    transform: translateX(-3px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+  80% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.colors {
+  display: flex;
+  justify-content: space-between;
+  composes: noSelect from global;
+}
+
+.radio {
+  position: relative;
+}
+
+.radio input {
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+}
+
+.radio span {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  line-height: 44px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 100ms ease-in-out;
+}
+
+.radio input + label span svg {
+  display: none;
+}
+
+.radio input:checked + label span svg {
+  display: block;
+}
+
+.radio input:focus + label span {
+  outline: 4px solid;
+  outline-offset: 1px;
+}
+
+@media screen and (min-width: 768px) {
+  .inputGroup {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    text-wrap: nowrap;
+    gap: 1.5rem;
+  }
+
+  .radioGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .colors {
+    gap: 1rem;
+  }
+
+  .radio span {
+    width: 60px;
+    height: 60px;
+  }
+
+  .submitButton {
+    max-width: fit-content;
+    margin-left: auto;
+  }
+}

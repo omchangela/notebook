@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+}
+
+.hideElem {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    display: block;
+  }
+}

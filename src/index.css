@@ -1,0 +1,107 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --primary: #f7ecdc;
+  --secondary: #ffffff;
+  --neutral: #e8e8e8;
+  --accent: #ffda57;
+  --info: #ff7b1d;
+
+  --primary-text: #000000;
+  --secondary-text: #292929;
+
+  --secondary-border: #cccccc;
+  --placeholder: #9a9a9a;
+  --icon: #ababab;
+
+  color-scheme: light dark;
+  color: var(--primary-text);
+  background-color: var(--secondary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  scrollbar-width: 10px;
+  scrollbar-color: #00000022 #ffffff00;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00000022;
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text);
+}
+
+textarea,
+input {
+  font-family: inherit;
+  letter-spacing: 0em;
+  line-height: 24px;
+  border: none;
+  overflow: auto;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--primary-text);
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
+}
+
+textarea::placeholder {
+  color: var(--placeholder);
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* This will remove blue hightlight on click on mobile devices */
+/* source: https://stackoverflow.com/questions/21003535/anyway-to-prevent-the-blue-highlighting-of-elements-in-chrome-when-clicking-quic */
+.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.noSelect:focus {
+  outline: none !important;
+}
